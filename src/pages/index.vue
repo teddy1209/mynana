@@ -1,9 +1,6 @@
 <style src="../css/index.css"></style>
 <template>
     <div class="index">
-        <div>{{msg}}</div>
-        <div>{{aDouble}}</div>
-        <div @click="say('hi')">点击我</div>
         <div class="header">
             <div class="logo">
                 <img src="../img/logo.jpg" class="banner">
@@ -65,6 +62,7 @@
 </template>
 
 <script>
+/* eslint-disable */ 
     export default {
         name: 'HelloWorld',
         data () {
