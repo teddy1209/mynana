@@ -29,20 +29,21 @@ export default {
   components: {},
   methods: {
     onSubmit() {
-      request.post("/api/user/login", this.form).then((result) => {
-        let res = result.data
-        if(res.errno === 0){
-          this.$message.success("登录成功!")
-          let userInfo = {
-            name: res.data.realname
+      request
+        .post("/api/user/login", this.form)
+        .then(result => {
+          let res = result.data;
+          if (res.errno === 0) {
+            this.$message.success("登录成功!");
+            let userInfo = {
+              name: res.data.realname
+            };
+            this.$emit("close", userInfo);
+          } else {
+            this.$message.error("用户名或密码错误!");
           }
-          this.$emit("close",userInfo)
-        }else{
-          this.$message.error("用户名或密码错误!")
-        }
-      }).catch((err) => {
-        
-      });;
+        })
+        .catch(err => {});
     }
   }
 };
