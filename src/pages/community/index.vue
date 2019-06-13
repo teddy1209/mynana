@@ -7,7 +7,7 @@
     </div>
     <el-table :data="tableData" style="width: 100%">
       <el-table-column label="日期">
-        <template slot-scope="scope">{{parseTime(scope.row.createtime,'{y}-{m}-{d}')}}</template>
+        <template slot-scope="scope">{{$formatDate(scope.row.createtime,'{y}-{m}-{d}')}}</template>
       </el-table-column>
       <el-table-column prop="author.realname" label="作者"></el-table-column>
       <el-table-column prop="title" label="标题"></el-table-column>

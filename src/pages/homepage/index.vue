@@ -9,6 +9,7 @@
       <ul class="landing">
         <li>
           <el-button v-if="!name" @click="login">登录</el-button>
+          <img v-if="name" :src="headPath" class="avatar">
           <el-dropdown v-if="name" @command="userClick">
             <span class="el-dropdown-link">
               欢迎{{name}}
@@ -55,9 +56,7 @@
         </a>
       </div>
       <div class="function fl fun-l">
-        <a href>
-          <p class="weight">狗狗体重</p>
-        </a>
+        <p @click="go('weights')" class="weight">狗狗数据</p>
       </div>
       <div class="function fr fun-r">
         <a href>
@@ -110,12 +109,20 @@ export default {
   name: "HelloWorld",
   data() {
     return {
+      headPath:
+        "https://mynana.oss-cn-beijing.aliyuncs.com/img/sy_74391315184.jpg", //默认头像路径
       name: "",
       dialogVisible: false
     };
   },
   computed: {},
   methods: {
+    //跳转链接的函数
+    go(des) {
+      if (des == "weights") {
+        this.$router.push({ path: "/myDog/weights" });
+      }
+    },
     // 点击菜单的选项触发的函数
     userClick(data) {
       if (data == 0) {

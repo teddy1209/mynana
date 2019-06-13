@@ -4,6 +4,7 @@ import homepage from '@/pages/homepage'
 import registration from '@/pages/login/registration'
 import personal from '@/pages/personal'
 import myDog from '@/pages/pets/mydog'
+import myDogWeights from '@/pages/pets/mydog/weights'
 import community from '@/pages/community';
 import dogIdentification from '@/pages/identification/dogs';
 Vue.use(Router)
@@ -28,6 +29,11 @@ export default new Router({
       path: '/myDog',
       name: 'myDog',
       component: myDog
+    },
+    {
+      path: '/myDog/weights',
+      name: 'myDogWeights',
+      component: myDogWeights
     }, {
       path: '/community',
       name: 'community',
