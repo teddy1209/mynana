@@ -1,6 +1,6 @@
 <template>
   <div>
-      注册页@@@
+      注册页@@
   </div>
 </template>
 
