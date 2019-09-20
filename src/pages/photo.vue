@@ -1,5 +1,5 @@
 <template>
-  <div>识别鉴定</div>
+  <div class="photo">狗狗相册</div>
 </template>
 
 <script type="text/ecmascript-6">
@@ -12,4 +12,7 @@ export default {
 </script>
 
 <style scoped>
+.photo{
+    min-height: 500px;
+}
 </style>

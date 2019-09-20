@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="mydog">
     <div class="title">欢迎您,{{name}}</div>
     <div class="dogList">
       <div>宠物列表</div>
@@ -38,9 +38,11 @@ export default {
 </script>
 
 <style scoped>
-.main {
+.mydog {
   margin: 0 auto;
   width: 1200px;
+  overflow: hidden;
+  min-height: 500px;
 }
 .button{
     padding-bottom: 0

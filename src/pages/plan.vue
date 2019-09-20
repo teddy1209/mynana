@@ -1,5 +1,5 @@
 <template>
-  <div>我的狗狗页面</div>
+  <div class="plan">计划</div>
 </template>
 
 <script type="text/ecmascript-6">
@@ -12,4 +12,7 @@ export default {
 </script>
 
 <style scoped>
+.plan{
+    min-height: 500px;
+}
 </style>
