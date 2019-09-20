@@ -5,7 +5,7 @@
             <img src="@/img/nana.png" class="nana">
         </div>
         <div class="landing">
-            <el-button v-if="!name" @click="login">登录</el-button>
+            <el-button plain v-if="!name" @click="login">登录</el-button>
             <img v-if="name" :src="headPath" class="avatar">
             <el-dropdown v-if="name" @command="userClick">
                 <span class="el-dropdown-link">
@@ -96,6 +96,7 @@ export default {
     width: 100%;
     height: 100px;
     margin: 0 auto;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 }
 .logo{
     width: 20%;
@@ -124,16 +125,13 @@ export default {
     float:left;
     margin-right: 15%;
     list-style-type: none;
-    color: #666666;
     font-size: 18px;
 }
 .header a:link{
     text-decoration:none;
-    color: #666666;
 }
 .header a:visited{
     text-decoration:none;
-    color: #666666;
 }
 .header a:hover{
     color: darkred;
@@ -147,7 +145,8 @@ export default {
     color: #666666;
     font-size: 18px;
 }
-.landing li{
-
+.landing .el-button{
+    width: 100px;
+    background: rgba(255,255,255,0.5)
 }
 </style>

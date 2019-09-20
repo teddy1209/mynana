@@ -32,6 +32,7 @@ export default {
 .footer{
     height: 200px;
     padding-top: 30px;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 }
 .describe{
     float: left;
